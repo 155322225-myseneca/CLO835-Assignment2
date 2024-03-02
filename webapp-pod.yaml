@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+spec:
+  containers:
+    - name: webapp
+      image: 632347313670.dkr.ecr.us-east-1.amazonaws.com/ecr_my_app:419a932
+      ports:
+        - containerPort: 80
+          protocol: TCP
