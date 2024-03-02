@@ -6,6 +6,17 @@ spec:
   containers:
     - name: webapp
       image: 632347313670.dkr.ecr.us-east-1.amazonaws.com/ecr_my_app:419a932
+      env:
+        - name: DBHOST
+          value: "182.18.0.2"
+        - name: DBPORT
+          value: "3306"
+        - name: DBUSER
+          value: "root"
+        - name: DATABASE
+          value: "employees"
+        - name: DBPW
+          value: "pw"
       ports:
-        - containerPort: 80
+        - containerPort: 8084
           protocol: TCP
