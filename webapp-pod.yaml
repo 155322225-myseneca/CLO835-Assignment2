@@ -18,5 +18,5 @@ spec:
         - name: DBPW
           value: "pw"
       ports:
-        - containerPort: 8084
+        - containerPort: 8080
           protocol: TCP
