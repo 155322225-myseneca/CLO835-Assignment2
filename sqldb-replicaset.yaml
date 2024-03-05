@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: sqldb
+  labels:
+    app: mysql
+    version: v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: sqldb
+          image: 632347313670.dkr.ecr.us-east-1.amazonaws.com/ecr_my_db:419a932
