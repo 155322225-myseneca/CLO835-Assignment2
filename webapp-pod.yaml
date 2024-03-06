@@ -17,5 +17,5 @@ spec:
              name: webapp-sql-secret
              key: password
       ports:
-        - containerPort: 8888
+        - containerPort: 8080
           protocol: TCP
