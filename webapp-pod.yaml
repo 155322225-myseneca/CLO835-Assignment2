@@ -12,7 +12,10 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: DBPWD
-          value: "password"
+          valueFrom:
+           secretKeyRef:
+             name: webapp-sql-secret
+             key: password
       ports:
         - containerPort: 8888
           protocol: TCP
