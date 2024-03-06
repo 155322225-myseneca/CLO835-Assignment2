@@ -18,3 +18,12 @@ spec:
       containers:
         - name: sqldb
           image: 632347313670.dkr.ecr.us-east-1.amazonaws.com/ecr_my_db:419a932
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: password
+          ports:
+            - containerPort: 3306
+              protocol: TCP
