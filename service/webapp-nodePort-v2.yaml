@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webappsvcv2
+  namespace: webapp
+  labels:
+    app: employees
+    version: v2
+spec:
+  type: NodePort
+  ports:
+  - port: 81
+    targetPort: 8080
+    nodePort: 30001
+  selector:
+    app: employees
+    version: v2
