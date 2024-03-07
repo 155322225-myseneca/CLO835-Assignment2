@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: sqldb
+  name: rs-sqldb
   labels:
     app: mysql
     version: v1
