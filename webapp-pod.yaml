@@ -8,7 +8,7 @@ spec:
       image: 632347313670.dkr.ecr.us-east-1.amazonaws.com/ecr_my_app:419a932
       env:
         - name: DBHOST
-          value: "sqldbsvc.sqldb"
+          value: "10.244.0.55"
         - name: DBPORT
           value: "3306"
         - name: DBPWD
