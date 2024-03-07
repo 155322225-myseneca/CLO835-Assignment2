@@ -5,6 +5,7 @@ metadata:
   namespace: sqldb
   labels:
     app: mysql
+    version: v1
 spec:
   replicas: 1
   selector:
