@@ -5,6 +5,7 @@ metadata:
   namespace: webapp
   labels:
     app: employees
+    version: v1
 spec:
   replicas: 3
   selector:
