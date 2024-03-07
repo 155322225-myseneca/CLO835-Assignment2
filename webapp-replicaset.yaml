@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: webapp
+  name: rs-webapp
+  namespace: webapp
   labels:
     app: employees
     version: v1
